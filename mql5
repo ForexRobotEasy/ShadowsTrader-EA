@@ -1,0 +1,101 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                   ShadowsTrader EA|
+//|                                      Developer: Forex Robot Easy Team|
+//|                                       Developer's site: forexroboteasy.com|
+//+------------------------------------------------------------------+
+#property strict
+
+// Global variables
+double riskPercentage = 2; // Risk percentage per trade
+double maxLossPercentage = 5; // Maximum acceptable loss percentage
+double lotSize = 0.01; // Default lot size
+double stopLoss = 50; // Default stop loss in pips
+double takeProfit = 100; // Default take profit in pips
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Set initial variable values
+    SetRiskPercentage(riskPercentage);
+    SetMaxLossPercentage(maxLossPercentage);
+    SetLotSize(lotSize);
+    SetStopLoss(stopLoss);
+    SetTakeProfit(takeProfit);
+
+    // Add necessary initialization code here
+
+    return INIT_SUCCEEDED;
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Add necessary deinitialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Add necessary code to evaluate market conditions and execute trades
+}
+
+//+------------------------------------------------------------------+
+//| Set risk percentage per trade                                    |
+//+------------------------------------------------------------------+
+void SetRiskPercentage(const double percentage)
+{
+    riskPercentage = percentage;
+}
+
+//+------------------------------------------------------------------+
+//| Set maximum acceptable loss percentage                           |
+//+------------------------------------------------------------------+
+void SetMaxLossPercentage(const double percentage)
+{
+    maxLossPercentage = percentage;
+}
+
+//+------------------------------------------------------------------+
+//| Set lot size                                                     |
+//+------------------------------------------------------------------+
+void SetLotSize(const double size)
+{
+    lotSize = size;
+}
+
+//+------------------------------------------------------------------+
+//| Set stop loss in pips                                            |
+//+------------------------------------------------------------------+
+void SetStopLoss(const double pips)
+{
+    stopLoss = pips;
+}
+
+//+------------------------------------------------------------------+
+//| Set take profit in pips                                          |
+//+------------------------------------------------------------------+
+void SetTakeProfit(const double pips)
+{
+    takeProfit = pips;
+}
+
+//+------------------------------------------------------------------+
+//| Main entry point                                                  |
+//+------------------------------------------------------------------+
+void OnStart()
+{
+    // Add necessary code to handle user interaction and customize trading settings
+}
+
+//+------------------------------------------------------------------+
+//| Custom functions                                                 |
+//+------------------------------------------------------------------+
+// Add necessary custom functions here
+
